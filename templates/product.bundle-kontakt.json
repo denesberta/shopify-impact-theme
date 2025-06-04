@@ -12,77 +12,1000 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
+        "text_g6cebP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.short_description.value }}</p>"
+          }
         },
         "title": {
           "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": true
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "separator": {
+          "type": "separator",
           "settings": {}
         },
         "badges": {
           "type": "badges",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {}
+        "text_U9fcEf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.top_4_highlights | metafield_tag }}</p>"
+          }
         },
-        "rating": {
-          "type": "rating",
-          "settings": {}
-        },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
+        "separator_RBKqKf": {
           "type": "separator",
           "settings": {}
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {}
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {}
-        },
-        "pickup_availability": {
-          "type": "pickup_availability",
-          "settings": {}
+        "associated_products_XFk64d": {
+          "type": "associated_products",
+          "settings": {
+            "title": "Buy it with",
+            "stack_products": true,
+            "products_count": 5,
+            "background": "",
+            "text_color": ""
+          }
         }
       },
       "block_order": [
-        "vendor",
+        "text_g6cebP",
         "title",
-        "badges",
         "price",
         "rating",
-        "payment_terms",
-        "separator",
+        "buy_buttons",
         "description",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons"
+        "separator",
+        "badges",
+        "text_U9fcEf",
+        "separator_RBKqKf",
+        "associated_products_XFk64d"
       ],
-      "settings": {}
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": false,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "mobile_media_size": "contained",
+        "mobile_carousel_control": "thumbnails",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "text_color": "#1a1a1a",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": "#1a1a1a"
+      }
     },
-    "related-products": {
+    "text_with_icons_EWmd9N": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_tqRVU7": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/Icon_-_Plugins.png",
+            "mobile_icon_width": 100,
+            "icon_width": 120,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.plugins_included.value }}",
+            "content": "<p>{{ product.metafields.custom.plugins_included_description.value }}</p>"
+          }
+        },
+        "item_mJKffC": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/Icon_-_Presets.png",
+            "mobile_icon_width": 100,
+            "icon_width": 120,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.presets_included.value }}",
+            "content": "<p>{{ product.metafields.custom.presets_included_description.value }}</p>"
+          }
+        },
+        "item_gfXH8R": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/DLCs.png",
+            "mobile_icon_width": 100,
+            "icon_width": 120,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.dlcs_included.value }}",
+            "content": "<p>{{ product.metafields.custom.dlcs_included_description.value }}</p>"
+          }
+        },
+        "item_kAh6mY": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/Icon_-_Genres.png",
+            "mobile_icon_width": 100,
+            "icon_width": 120,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.genres_focus.value }}",
+            "content": "<p>{{ product.metafields.custom.genres_focus_description.value }}</p>"
+          }
+        },
+        "item_37ymVn": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "custom_icon": "shopify://shop_images/Icon_-_Kontakt_3.png",
+            "mobile_icon_width": 100,
+            "icon_width": 120,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.additional_focus.value }}",
+            "content": "<p>{{ product.metafields.custom.additional_focus_description.value }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_tqRVU7",
+        "item_mJKffC",
+        "item_gfXH8R",
+        "item_kAh6mY",
+        "item_37ymVn"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h5",
+        "text_alignment": "start",
+        "icon_spacing": "medium",
+        "background": "rgba(0,0,0,0)",
+        "background_gradient": "",
+        "text_color": "#000000"
+      }
+    },
+    "rich_text_DFRGet": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_gmTHRn": {
+          "type": "subheading",
+          "settings": {
+            "text": "{{ product.metafields.custom.feature_1_subheading.value }}"
+          }
+        },
+        "heading_8TMKeF": {
+          "type": "heading",
+          "settings": {
+            "text": "{{ product.metafields.custom.feature_1_product_level_.value }}",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_UPUYDc": {
+          "type": "richtext",
+          "settings": {
+            "content": "{{ product.metafields.custom.feature_1_product_level_description | metafield_tag }}"
+          }
+        },
+        "image_dwK4q3": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "{{ product.metafields.custom.feature_1_product_level_image_or_video.value }}",
+            "width_mode": "custom",
+            "max_width": 600,
+            "mobile_max_width": 400
+          }
+        }
+      },
+      "block_order": [
+        "subheading_gmTHRn",
+        "heading_8TMKeF",
+        "richtext_UPUYDc",
+        "image_dwK4q3"
+      ],
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "media_grid_RTDJUd": {
+      "type": "media-grid",
+      "blocks": {
+        "image_f6zLA4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/studio-5.jpg",
+            "title": "",
+            "heading_tag": "h4",
+            "link_url": "",
+            "link_text": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_HJwNdN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/studio-4.jpg",
+            "title": "",
+            "heading_tag": "h4",
+            "link_url": "",
+            "link_text": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 2,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "image_jHphPX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/studio-3.jpg",
+            "title": "",
+            "heading_tag": "h4",
+            "link_url": "",
+            "link_text": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 1,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#000000",
+            "background_gradient": "",
+            "text_color": "#ffffff",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_f6zLA4",
+        "image_HJwNdN",
+        "image_jHphPX"
+      ],
+      "settings": {
+        "full_width": true,
+        "reduce_width": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 150,
+        "background": "",
+        "background_gradient": ""
+      }
+    },
+    "multi_column_zzKxFp": {
+      "type": "multi-column",
+      "blocks": {
+        "item_q3Ukzk": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-14.jpg",
+            "column_size": "3",
+            "title": "Polyscape",
+            "heading_tag": "h4",
+            "content": "<p>An atmospheric synth engine designed for crafting lush soundscapes and ambient textures. Ideal for cinematic compositions and experimental scoring.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_Rb3QJt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-13.jpg",
+            "column_size": "3",
+            "title": "Polyscape 2",
+            "heading_tag": "h4",
+            "content": "<p>A hybrid soundscape designer combining analog textures and modular layers. Perfect for film music and modern ambient production.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_RCrjyB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-9.jpg",
+            "column_size": "3",
+            "title": "Continuo",
+            "heading_tag": "h4",
+            "content": "<p>A cinematic guitar soundscape engine blending organic recordings with synth layers to create evolving pads and textures.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_gMLcYG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-10.jpg",
+            "column_size": "3",
+            "title": "Continuo 2",
+            "heading_tag": "h4",
+            "content": "<p>A soundscape engine focused on cinematic piano textures, layered with synths and ambient effects. Ideal for emotional scoring.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_8r3jJT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-12.jpg",
+            "column_size": "3",
+            "title": "Abstract Marimba",
+            "heading_tag": "h4",
+            "content": "<p>A cinematic mallet instrument offering wooden, percussive textures with an experimental twist. Great for scoring and creative sound design.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_paWU3e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-11.jpg",
+            "column_size": "3",
+            "title": "Abstract Vibes",
+            "heading_tag": "h4",
+            "content": "<p>A modern vibraphone instrument with rich transients and a unique tonal character. Excellent for lo-fi, film, and jazz-inspired tracks.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_YJCDH6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-1.jpg",
+            "column_size": "3",
+            "title": "Analog Tales",
+            "heading_tag": "h4",
+            "content": "<p>A versatile analog synth designer featuring warm, retro tones and powerful sound shaping capabilities.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_4whTFH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image.jpg",
+            "column_size": "3",
+            "title": "Analog Nightmares",
+            "heading_tag": "h4",
+            "content": "<p>A collection of analog synth sounds exploring darker, edgier tones. Tailored for horror scoring, trailers, and dystopian music.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_8zU4Hg": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-8.jpg",
+            "column_size": "3",
+            "title": "Analog Tales 2",
+            "heading_tag": "h4",
+            "content": "<p>An evolution of the original Analog Tales with expanded warm, overdriven synth textures and new sonic possibilities.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_V6kwRq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-2.jpg",
+            "column_size": "3",
+            "title": "Wavesynth",
+            "heading_tag": "h4",
+            "content": "<p>An advanced wavetable synth engine with randomization features. Ideal for retro, synthwave, and futuristic sound design.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_ijr866": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-4.jpg",
+            "column_size": "3",
+            "title": "Wavesynth 2 Glow",
+            "heading_tag": "h4",
+            "content": "<p>A retro-futuristic wavetable instrument with glowing pads, shimmering leads, and vintage-inspired tones.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_DxAgzm": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-3.jpg",
+            "column_size": "3",
+            "title": "Wavesynth 3 Pitch Black",
+            "heading_tag": "h4",
+            "content": "<p>A heavy-hitting wavetable synth designed for deep basses, gritty textures, and aggressive leads.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_qmTARz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-6.jpg",
+            "column_size": "3",
+            "title": "Vapor Keys",
+            "heading_tag": "h4",
+            "content": "<p>A warm electric piano instrument infused with sunbaked, vintage tones. Inspired by chillhop and vaporwave aesthetics.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_xVFLiL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-7.jpg",
+            "column_size": "3",
+            "title": "Vapor Keys 2",
+            "heading_tag": "h4",
+            "content": "<p>A modern blend of analog and FM synthesis, delivering nostalgic 90s keyboard textures. Perfect for lo-fi, R&B, and retro electronica.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_n7rDnj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_Store_Image-5.jpg",
+            "column_size": "3",
+            "title": "Karanyi's Synths DX",
+            "heading_tag": "h4",
+            "content": "<p>A classic digital synth inspired by 80s hardware. Great for retro pop, synthwave, and ambient productions.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_q3Ukzk",
+        "item_Rb3QJt",
+        "item_RCrjyB",
+        "item_gMLcYG",
+        "item_8r3jJT",
+        "item_paWU3e",
+        "item_YJCDH6",
+        "item_4whTFH",
+        "item_8zU4Hg",
+        "item_V6kwRq",
+        "item_ijr866",
+        "item_DxAgzm",
+        "item_qmTARz",
+        "item_xVFLiL",
+        "item_n7rDnj"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "What's Inside?",
+        "title": "Kontakt Instruments",
+        "content": "<p>Get all Karanyi Sounds Kontakt instruments in one bundle — cinematic soundscape engines, hybrid synths, and experimental textures. All products require the <strong>full version of Native Instruments Kontakt 6.7 or higher</strong> (the free Kontakt Player is not supported).</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "multi_column_JQfYDf": {
+      "type": "multi-column",
+      "blocks": {
+        "item_m9X4jD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_DLC_Store_Image-5.jpg",
+            "column_size": "3",
+            "title": "Analog Blur",
+            "heading_tag": "h4",
+            "content": "<p>A lush, cinematic expansion for <em>Polyscape 1</em>, focusing on deep analog soundscapes. Includes 5 new PCM organ sound sources and 70 new artist presets.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_CKi8M8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_DLC_Store_Image-2.jpg",
+            "column_size": "3",
+            "title": "String Theory",
+            "heading_tag": "h4",
+            "content": "<p>A cinematic expansion for <em>Continuo 1</em>, built for sci-fi scoring and atmospheric sound design. Includes 50 presets — from vast pads and cosmic leads to organic pulses and alien SFX — perfect for space-themed compositions both retro and futuristic.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_c6nr3G": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_DLC_Store_Image-6.jpg",
+            "column_size": "3",
+            "title": "Sphere",
+            "heading_tag": "h4",
+            "content": "<p>An ethereal and atmospheric expansion for <em>Polyscape 2</em>, crafted by Aeron Aether. Includes 50 lush artist presets featuring pads, keys, basses, leads, and FX — ideal for chill, ambient, and cinematic soundscape-driven productions.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_m9dQe6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_DLC_Store_Image-3.jpg",
+            "column_size": "3",
+            "title": "Melodic Odyssey",
+            "heading_tag": "h4",
+            "content": "<p>A driving and futuristic expansion for <em>Wavesynth</em>, designed for modern melodic techno and electronic music. Includes 40 expertly crafted presets with bold basslines, intricate arpeggios, and cinematic textures inspired by iconic labels like Afterlife and Innervisions.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_K7yGG3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_DLC_Store_Image.jpg",
+            "column_size": "3",
+            "title": "Galaxy Noir",
+            "heading_tag": "h4",
+            "content": "<p>A dark and experimental expansion for <em>Polyscape 2</em>, inspired by modern video game soundtracks and post-cinematic scoring. Includes 40 bold presets featuring deep basses, dramatic leads, orchestral elements, and expansive pads — perfect for crafting intense, otherworldly textures.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_WDazk3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_DLC_Store_Image-4.jpg",
+            "column_size": "3",
+            "title": "Dark Energy",
+            "heading_tag": "h4",
+            "content": "<p>A dark and emotional expansion for <em>Continuo 2</em>, designed for cinematic and ambient scoring. Includes 60 deep soundscape presets with modular-sourced instruments, pulses, and evolving textures.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_6BAptr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Kontakt_DLC_Store_Image-1.jpg",
+            "column_size": "3",
+            "title": "Flame",
+            "heading_tag": "h4",
+            "content": "<p>A genre-blending expansion for <em>Analog Tales 2</em>, created by top electronic music producers and YouTubers. Includes 70 exclusive presets tailored for EDM, lo-fi, and cinematic styles — delivering warm, overdriven tones with a fiery analog edge.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_m9X4jD",
+        "item_CKi8M8",
+        "item_c6nr3G",
+        "item_m9dQe6",
+        "item_K7yGG3",
+        "item_WDazk3",
+        "item_6BAptr"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "More to Explore",
+        "title": "Included DLCs",
+        "content": "<p>Explore theme-specific preset expansions for the included Kontakt instruments. Extra sound sources, artist presets, and sonic flavors tailored for cinematic, electronic, lo-fi, and ambient productions.</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "testimonials_c9GzPT": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_nxwnK7": {
+          "type": "testimonial",
+          "settings": {
+            "image": "{{ product.metafields.custom.testimonial_profile_image.value }}",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "{{ product.metafields.custom.testimonial_name_and_credits.value }}",
+            "title": "\"{{ product.metafields.custom.testimonial_quote.value }}\"",
+            "content": ""
+          }
+        },
+        "testimonial_7W64VF": {
+          "type": "testimonial",
+          "settings": {
+            "image": "{{ product.metafields.custom.testimonial_2_image.value }}",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "{{ product.metafields.custom.testimonial_2_name_credits.value }}",
+            "title": "{{ product.metafields.custom.testimonial_2_quote.value }}",
+            "content": ""
+          }
+        },
+        "testimonial_4YTjJW": {
+          "type": "testimonial",
+          "settings": {
+            "image": "{{ product.metafields.custom.testimonial_3_image.value }}",
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "{{ product.metafields.custom.testimonial_3_name_credits.value }}",
+            "title": "{{ product.metafields.custom.testimonial_3_quote.value }}",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_nxwnK7",
+        "testimonial_7W64VF",
+        "testimonial_4YTjJW"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": true,
+        "subheading": "",
+        "title": "What The Pros Say",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "testimonial_card_background": "",
+        "testimonial_card_text_color": ""
+      }
+    },
+    "comparison_table_HfPata": {
+      "type": "comparison-table",
+      "blocks": {
+        "headings_kXeYCt": {
+          "type": "headings",
+          "settings": {
+            "heading_1": "About",
+            "heading_2": "Key Features",
+            "heading_3": "Plugins included",
+            "heading_4": "DLCs included",
+            "heading_5": "Preset library",
+            "heading_6": "",
+            "heading_7": "",
+            "heading_8": "",
+            "heading_9": "",
+            "heading_10": "",
+            "heading_11": "",
+            "heading_12": "",
+            "heading_13": "",
+            "heading_14": "",
+            "heading_15": "",
+            "heading_16": "",
+            "heading_17": "",
+            "heading_18": "",
+            "heading_19": "",
+            "heading_20": ""
+          }
+        },
+        "values_7EVYKR": {
+          "type": "values",
+          "settings": {
+            "product": "complete-kontakt-suite",
+            "value_1": "{{ block.settings.product.description }}",
+            "value_2": "{{ block.settings.product.metafields.custom.top_4_highlights | metafield_tag }}",
+            "value_3": "<p>{{ block.settings.product.metafields.custom.plugins_included.value }}</p>",
+            "value_4": "<p>{{ block.settings.product.metafields.custom.dlcs_included.value }}</p>",
+            "value_5": "<p>{{ block.settings.product.metafields.custom.presets_included.value }}</p>",
+            "value_6": "",
+            "value_7": "",
+            "value_8": "",
+            "value_9": "",
+            "value_10": "",
+            "value_11": "",
+            "value_12": "",
+            "value_13": "",
+            "value_14": "",
+            "value_15": "",
+            "value_16": "",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "view_button_background": "",
+            "view_button_text_color": ""
+          }
+        },
+        "values_CxEGAB": {
+          "type": "values",
+          "settings": {
+            "product": "karanyi-sounds-complete-suite",
+            "value_1": "{{ block.settings.product.description }}",
+            "value_2": "{{ block.settings.product.metafields.custom.top_4_highlights | metafield_tag }}",
+            "value_3": "<p>{{ block.settings.product.metafields.custom.plugins_included.value }}</p>",
+            "value_4": "<p>{{ block.settings.product.metafields.custom.dlcs_included.value }}</p>",
+            "value_5": "<p>{{ block.settings.product.metafields.custom.presets_included.value }}</p>",
+            "value_6": "",
+            "value_7": "",
+            "value_8": "",
+            "value_9": "",
+            "value_10": "",
+            "value_11": "",
+            "value_12": "",
+            "value_13": "",
+            "value_14": "",
+            "value_15": "",
+            "value_16": "",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "view_button_background": "",
+            "view_button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "headings_kXeYCt",
+        "values_7EVYKR",
+        "values_CxEGAB"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "subheading": "Which fits you the best?",
+        "title": "Compare our Collections",
+        "content": "<p>Give your customers useful information about your products and showcase differences between them.</p>",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "max_rows": 5,
+        "view_all_text": "View all",
+        "view_less_text": "View less",
+        "view_product": "View",
+        "show_product_info": true,
+        "show_product_image": true,
+        "show_product_swatch": true,
+        "viewing_product": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "chart_background": "",
+        "chart_text_color": "",
+        "chart_true_false_color": ""
+      }
+    },
+    "logo_list_L8zc86": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_UEiPJy": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Icon_-_SOS_Black_w_Text.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_iHHVdD": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Icon_-_Music_Radar_Black_w_Text.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_MtVbMg": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Icon_-_Ask_Audio_Black_w_Text.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_Rbqxg4": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Icon_-_Attack_Black_w_Text.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_QfMzVC": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Icon_-_MUsic_Tech_Black_w_Text.png",
+            "logo_width": 120,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_UEiPJy",
+        "logo_iHHVdD",
+        "logo_MtVbMg",
+        "logo_Rbqxg4",
+        "logo_QfMzVC"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "",
+        "content": "",
+        "text_alignment": "start",
+        "items_per_row": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
+    "related_products_EtRzVw": {
       "type": "related-products",
-      "settings": {}
+      "settings": {
+        "recommendations_count": 6,
+        "products": "{{ product.metafields.custom.products_included.value }}",
+        "show_product_prices": true,
+        "full_width": false,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Related Bundles",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "173383618225a3fe96": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "related_products_aX6REC": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "recommendations_count": 6,
+        "products": [],
+        "show_product_prices": true,
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "You may also like",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "text_with_icons_EWmd9N",
+    "rich_text_DFRGet",
+    "media_grid_RTDJUd",
+    "multi_column_zzKxFp",
+    "multi_column_JQfYDf",
+    "testimonials_c9GzPT",
+    "comparison_table_HfPata",
+    "logo_list_L8zc86",
+    "related_products_EtRzVw",
+    "173383618225a3fe96",
+    "related_products_aX6REC"
   ]
 }
