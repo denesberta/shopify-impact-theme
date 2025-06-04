@@ -1,0 +1,116 @@
+{%- unless section.settings.full_width -%}
+  {%- render 'section-spacing-collapsing' -%}
+{%- endunless -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-outer-spacing-block: 0;
+  }
+
+  .video-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .video-wrapper::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .video-container {
+      flex-direction: row;
+    }
+    
+    .video-wrapper {
+      flex: 1;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .video-container {
+      gap: 15px;
+    }
+  }
+</style>
+
+<div {% render 'section-properties' %}>
+  <div class="video-container">
+    {%- if section.settings.video_1 -%}
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/{{ section.settings.video_1 | split: 'v=' | last | split: '&' | first }}" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.video_2 -%}
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/{{ section.settings.video_2 | split: 'v=' | last | split: '&' | first }}" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.video_3 -%}
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/{{ section.settings.video_3 | split: 'v=' | last | split: '&' | first }}" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "DK Multiple Videos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_1",
+      "label": "YouTube Video 1 URL"
+    },
+    {
+      "type": "text",
+      "id": "video_2",
+      "label": "YouTube Video 2 URL"
+    },
+    {
+      "type": "text",
+      "id": "video_3",
+      "label": "YouTube Video 3 URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "DK Multiple Videos"
+    }
+  ]
+}
+{% endschema %}
