@@ -1,0 +1,104 @@
+{% schema %}
+{
+  "name": "SoundCloud Player",
+  "settings": [
+    {
+      "type": "text",
+      "id": "soundcloud_url",
+      "label": "SoundCloud URL",
+      "info": "Paste your SoundCloud playlist or track URL"
+    },
+    {
+      "type": "color",
+      "id": "player_color",
+      "label": "Player Color"
+    },
+    {
+      "type": "range",
+      "id": "player_height",
+      "min": 300,
+      "max": 600,
+      "step": 50,
+      "unit": "px",
+      "label": "Player Height",
+      "default": 450
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SoundCloud Player",
+      "category": "Audio"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="soundcloud-section">
+  <div class="page-width">
+    {%- if section.settings.soundcloud_url != blank -%}
+      <div class="soundcloud-player">
+        <iframe 
+          width="100%" 
+          height="{{ section.settings.player_height }}" 
+          scrolling="no" 
+          frameborder="no" 
+          allow="autoplay" 
+          src="https://w.soundcloud.com/player/?url={{ section.settings.soundcloud_url | url_encode }}&color={{ section.settings.player_color | remove: '#' }}&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+        </iframe>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <div class="rte text-center">
+        {{ section.settings.description }}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+  .soundcloud-section {
+    margin: 0;
+    padding: 40px 0;
+    width: 100%;
+    background-color: {% if section.settings.background != blank %}{{ section.settings.background }}{% else %}transparent{% endif %};
+  }
+
+  .page-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: transparent;
+  }
+
+  .soundcloud-player {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto 30px;
+  }
+
+  .rte {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 749px) {
+    .page-width {
+      padding: 0 10px;
+    }
+  }
+</style>
