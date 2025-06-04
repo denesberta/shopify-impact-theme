@@ -1,1 +1,99 @@
-{"sections":{"main":{"type":"main-blog","settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "newsletter_kR6nhK": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "show_icon": false,
+        "title": "Stories to Inspire You",
+        "content": "<p>Discover inspiring techniques for music creation and useful tips on how to get the most out of our plugins. Right to your inbox.</p>",
+        "button_text": "Submit",
+        "subtext": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "newsletter_U3FhCd": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Newsletter",
+            "content": "<p>Discover inspiring techniques for music creation and useful tips on how to get the most out of our plugins. Right to your inbox.</p>",
+            "button_text": "Subscribe",
+            "subtext": "",
+            "position": 5,
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_U3FhCd"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "content": "<p>Music Production Stories, Tips & Studio Breakdowns: Discover inspiring techniques for music creation and get practical tips on how to make the most of our plugins — delivered straight to your inbox.</p>",
+        "show_newsletter_form": true,
+        "show_tags": true,
+        "banner_background": "",
+        "banner_text_color": "",
+        "button_background": "",
+        "button_text_color": "",
+        "articles_per_page": 6,
+        "feature_first_article": true,
+        "feature_article_background": "",
+        "feature_article_text_color": "",
+        "show_excerpt": true,
+        "show_date": true,
+        "show_author": false,
+        "show_comments_count": false,
+        "show_category": true
+      }
+    },
+    "featured_collection_WNbkEd": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all-products",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 10,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "Browse our Plugins",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "newsletter_kR6nhK",
+    "main",
+    "featured_collection_WNbkEd"
+  ]
+}
