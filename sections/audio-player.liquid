@@ -1,0 +1,274 @@
+{%- style -%}
+.waveform-container {
+  margin: 5px 0;
+  padding: 10px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: black;
+  overflow-x: hidden;
+}
+
+.player-container {
+  background: transparent;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.play-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.track-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.waveform {
+  position: relative;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.waveform-bars {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.waveform-bar {
+  flex: 0.5;
+  background: rgba(0, 0, 0, 1);
+  min-width: 0.025px;
+  transition: background-color 0.2s ease;
+}
+
+.waveform-bar.active {
+  background: #000000;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 8px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.optional-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+}
+{%- endstyle -%}
+
+<div class="waveform-container">
+  <div class="player-container">
+    <div class="track-info">
+      <div class="play-button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: #ffffff;">
+          <polygon points="5 3 19 12 5 21" fill="currentColor"></polygon>
+        </svg>
+      </div>
+      <div class="track-title">{{ section.settings.title }}</div>
+    </div>
+    
+    <div class="waveform">
+      <div class="waveform-bars">
+        <div class="loading">Analyzing audio...</div>
+      </div>
+    </div>
+    
+    <div class="time-display">
+      <span class="current-time">0:00</span>
+      <span class="duration">0:00</span>
+    </div>
+    
+    <audio class="hidden">
+      <source src="{{ section.settings.audio_file }}" type="audio/wav">
+    </audio>
+
+    {% if section.settings.optional_info %}
+      <div class="optional-info">{{ section.settings.optional_info }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const containers = document.querySelectorAll('.waveform-container');
+
+  containers.forEach(container => {
+    const player = container.querySelector('.player-container');
+    const playButton = player.querySelector('.play-button');
+    const audio = player.querySelector('audio');
+    const waveformBars = player.querySelector('.waveform-bars');
+    const currentTimeDisplay = player.querySelector('.current-time');
+    const durationDisplay = player.querySelector('.duration');
+    let isPlaying = false;
+    
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    let audioBuffer;
+
+    async function generateWaveform(url) {
+      try {
+        const response = await fetch(url);
+        const arrayBuffer = await response.arrayBuffer();
+        audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+        
+        const rawData = audioBuffer.getChannelData(0);
+        const samples = 300;
+        const blockSize = Math.floor(rawData.length / samples);
+        const filteredData = [];
+        
+        for (let i = 0; i < samples; i++) {
+          const blockStart = blockSize * i;
+          let blockSum = 0;
+          for (let j = 0; j < blockSize; j++) {
+            blockSum += Math.abs(rawData[blockStart + j]);
+          }
+          filteredData.push(blockSum / blockSize);
+        }
+        
+        const multiplier = Math.pow(Math.max(...filteredData), -1);
+        const normalizedData = filteredData.map(n => n * multiplier);
+        
+        waveformBars.innerHTML = '';
+        
+        normalizedData.forEach(height => {
+          const bar = document.createElement('div');
+          bar.className = 'waveform-bar';
+          bar.style.height = `${Math.max(3, height * 100)}%`;
+          waveformBars.appendChild(bar);
+        });
+        
+        const minutes = Math.floor(audioBuffer.duration / 60);
+        const seconds = Math.floor(audioBuffer.duration % 60);
+        durationDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+      } catch (error) {
+        console.error('Error loading audio:', error);
+        waveformBars.innerHTML = '<div class="loading">Error loading audio</div>';
+      }
+    }
+
+    generateWaveform(audio.querySelector('source').src);
+    
+    playButton.addEventListener('click', function() {
+      if (isPlaying) {
+        audio.pause();
+        playButton.innerHTML = `
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: #ffffff;">
+            <polygon points="5 3 19 12 5 21" fill="currentColor"></polygon>
+          </svg>
+        `;
+      } else {
+        audio.play();
+        playButton.innerHTML = `
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: #ffffff;">
+            <rect x="6" y="4" width="4" height="16" fill="currentColor"></rect>
+            <rect x="14" y="4" width="4" height="16" fill="currentColor"></rect>
+          </svg>
+        `;
+      }
+      isPlaying = !isPlaying;
+    });
+
+    audio.addEventListener('timeupdate', function() {
+      const progress = (audio.currentTime / audio.duration);
+      const bars = waveformBars.querySelectorAll('.waveform-bar');
+      const activeBarCount = Math.floor(progress * bars.length);
+      
+      bars.forEach((bar, index) => {
+        if (index < activeBarCount) {
+          bar.classList.add('active');
+        } else {
+          bar.classList.remove('active');
+        }
+      });
+      
+      const minutes = Math.floor(audio.currentTime / 60);
+      const seconds = Math.floor(audio.currentTime % 60);
+      currentTimeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    });
+
+    audio.addEventListener('ended', function() {
+      isPlaying = false;
+      playButton.innerHTML = `
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="color: #ffffff;">
+          <polygon points="5 3 19 12 5 21" fill="currentColor"></polygon>
+        </svg>
+      `;
+      const bars = waveformBars.querySelectorAll('.waveform-bar');
+      bars.forEach(bar => bar.classList.remove('active'));
+      currentTimeDisplay.textContent = '0:00';
+    });
+
+    waveformBars.addEventListener('click', function(e) {
+      const rect = waveformBars.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const seekTime = (x / rect.width) * audio.duration;
+      audio.currentTime = seekTime;
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "DK Audio Player (Single)",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Audio Track Title",
+      "default": "Audio Track"
+    },
+    {
+      "type": "url",
+      "id": "audio_file",
+      "label": "Audio Track link (mp3)"
+    },
+    {
+      "type": "text",
+      "id": "optional_info",
+      "label": "Track Info (Optional)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "DK Audio Player (Single)",
+      "category": "Media"
+    }
+  ]
+}
+{% endschema %} 
