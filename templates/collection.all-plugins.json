@@ -11,15 +11,238 @@
   "sections": {
     "banner": {
       "type": "collection-banner",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "collection_title_size": "h0",
+        "image_size": "auto",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "featured_product": "",
+        "featured_product_heading": "Featured product",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "featured_product_FXndRF": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_CfNiJ9": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "text_XL8cEx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ section.settings.product.metafields.custom.short_description.value }}</p>"
+          }
+        },
+        "title_6EHi7b": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "price_6dy8GR": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": true
+          }
+        },
+        "badges_PQfytD": {
+          "type": "badges",
+          "settings": {}
+        },
+        "rating_PpYtda": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "buy_buttons_WXqYdR": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "separator_QnmqFN": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description_9bcJDf": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "button_QAYqgD": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "shopify://products/karanyi-sounds-complete-suite",
+            "text": "Learn More",
+            "size": "xl",
+            "style": "fill",
+            "stretch": true,
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "vendor_CfNiJ9",
+        "text_XL8cEx",
+        "title_6EHi7b",
+        "price_6dy8GR",
+        "badges_PQfytD",
+        "rating_PpYtda",
+        "buy_buttons_WXqYdR",
+        "separator_QnmqFN",
+        "description_9bcJDf",
+        "button_QAYqgD"
+      ],
+      "settings": {
+        "full_width": true,
+        "product": "karanyi-sounds-complete-suite",
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
     },
     "main": {
       "type": "main-collection",
-      "settings": {}
+      "blocks": {
+        "promotion_video_EFeqYb": {
+          "type": "promotion_video",
+          "settings": {
+            "position": 19,
+            "column_span": "2",
+            "video": "shopify://files/videos/lofi loop front.mov",
+            "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "title": "Out Now: Lofi Keys 2",
+            "content": "<p>Signature Keys for Modern Vibes</p>",
+            "link_url": "shopify://products/lofi-keys-2",
+            "link_text": "See More",
+            "heading_tag": "h4",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "promotion_video_EFeqYb"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "show_product_prices": true,
+        "filter_layout": "drawer",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": false,
+        "show_filter_values_count": false,
+        "open_first_filter_group": false
+      }
+    },
+    "collection_list_Hf8TCx": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_qiiPRk": {
+          "type": "collection",
+          "settings": {
+            "collection": "effects",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_gebCae": {
+          "type": "collection",
+          "settings": {
+            "collection": "instruments",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_Xir6zm": {
+          "type": "collection",
+          "settings": {
+            "collection": "ai-powered",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_qiiPRk",
+        "collection_gebCae",
+        "collection_Xir6zm"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_collections": true,
+        "collections_per_row": 3,
+        "show_progress_bar": false,
+        "subheading": "",
+        "title": "Browse by Category",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
     "banner",
-    "main"
+    "featured_product_FXndRF",
+    "main",
+    "collection_list_Hf8TCx"
   ]
 }
