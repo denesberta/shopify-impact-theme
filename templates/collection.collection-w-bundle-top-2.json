@@ -1,0 +1,167 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "collection_title_size": "h0",
+        "image_size": "auto",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "featured_product": "",
+        "featured_product_heading": "Featured product",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "media_grid_f7Kw73": {
+      "type": "media-grid",
+      "blocks": {
+        "image_RiQt9a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FX_Collection_-_Hero_Badge_a68bf65e-8c29-4c5d-b173-65b1dcde32bd.png",
+            "title": "",
+            "heading_tag": "h4",
+            "link_url": "shopify://products/creative-fx-colection",
+            "link_text": "Get All Effect Plugins and Save",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 2,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#aee4e8",
+            "background_gradient": "",
+            "text_color": "#000000",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#ffffff",
+            "overlay_opacity": 0
+          }
+        },
+        "image_aa6BTf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/KS_Collection_-_Hero_Badge_5030fc19-fb6e-4e06-9245-a248cc853e26.png",
+            "title": "",
+            "heading_tag": "h4",
+            "link_url": "shopify://products/karanyi-sounds-complete-suite",
+            "link_text": "Get All Instruments & FX and Save",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_column_span": 2,
+            "desktop_row_span": 2,
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "background": "#aecae8",
+            "background_gradient": "",
+            "text_color": "#000000",
+            "text_gradient": "",
+            "button_background": "#000000",
+            "button_text_color": "#ffffff",
+            "overlay_color": "#ffffff",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_RiQt9a",
+        "image_aa6BTf"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "reduce_width": false,
+        "desktop_row_height": 280,
+        "mobile_row_height": 150,
+        "background": "",
+        "background_gradient": ""
+      }
+    },
+    "featured_collection_RA3cnA": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "bundles",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "show_product_prices": true,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "promotion_video_nDamyi": {
+          "type": "promotion_video",
+          "disabled": true,
+          "settings": {
+            "position": 1,
+            "column_span": "2",
+            "video": "shopify://files/videos/Breeze Web 3D Video Test.mov",
+            "external_video_url": "",
+            "title": "OUT NOW: Breeze",
+            "content": "",
+            "link_url": "shopify://products/cloudmax-breeze",
+            "link_text": "Vocal Effects with AI",
+            "heading_tag": "h4",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "promotion_video_nDamyi"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "show_product_prices": true,
+        "filter_layout": "drawer",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_filter_group_name": false,
+        "show_filter_values_count": true,
+        "open_first_filter_group": false
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "media_grid_f7Kw73",
+    "featured_collection_RA3cnA",
+    "main"
+  ]
+}
