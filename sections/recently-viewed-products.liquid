@@ -53,7 +53,7 @@ LIQUID
                 {%- assign product_to_render = search.results | where: 'id', id | first -%}
 
                 {%- if product_to_render != blank -%}
-                  {%- render 'product-card', product: product_to_render, stacked: section.settings.stack_products, background: section.settings.product_card_background, text_color: section.settings.product_card_text_color, show_badges: true -%}
+                  {%- render 'product-card', product: product_to_render, stacked: section.settings.stack_products, position: forloop.index, background: section.settings.product_card_background, text_color: section.settings.product_card_text_color, show_badges: true, show_prices: section.settings.show_product_prices -%}
                 {%- endif -%}
               {%- endfor -%}
             </product-list>
@@ -156,6 +156,17 @@ LIQUID
       "type": "richtext",
       "id": "content",
       "label": "Content"
+    },
+    {
+      "type": "header",
+      "content": "Price visibility"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_prices",
+      "label": "Show product prices",
+      "default": true,
+      "info": "Toggle visibility of product prices in this section"
     },
     {
       "type": "header",
