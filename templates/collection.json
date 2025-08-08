@@ -35,7 +35,6 @@
       "blocks": {
         "promotion_video_nDamyi": {
           "type": "promotion_video",
-          "disabled": true,
           "settings": {
             "position": 4,
             "column_span": "2",
