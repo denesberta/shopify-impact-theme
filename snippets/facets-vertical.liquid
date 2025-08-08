@@ -129,11 +129,7 @@ Supported variables
           {%- endcase -%}
         {%- endcapture -%}
 
-        {%- if section.settings.open_first_filter_group and iterated_filters_count == 0 -%}
-          {%- assign open_accordion = true -%}
-        {%- else -%}
-          {%- assign open_accordion = false -%}
-        {%- endif -%}
+        {%- assign open_accordion = true -%}
 
         {%- assign accordion_id = 'accordion-' | append: filter.param_name | handle -%}
         {%- render 'accordion', title: filter.label, content: accordion_content, open: open_accordion, id: accordion_id -%}
