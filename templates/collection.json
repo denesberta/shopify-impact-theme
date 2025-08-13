@@ -55,7 +55,6 @@
       "block_order": [
         "promotion_video_nDamyi"
       ],
-      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "products_per_row_mobile": "2",
@@ -96,7 +95,19 @@
       "block_order": [
         "85212ee9-2d63-4a5f-92e1-0b97099bd3d8"
       ],
-      "settings": {}
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff"
+      }
     }
   },
   "order": [
