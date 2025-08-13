@@ -52,10 +52,12 @@
     "checkout_button_color": "#1a1a1a",
     "content_for_index": [],
     "blocks": {
-      "16881471024131275657": {
-        "type": "shopify://apps/searchanise-search-filter/blocks/app-embed/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
-        "disabled": true,
-        "settings": {}
+      "f10e1fe8-75f3-4815-90fc-cab1a95e1f3a": {
+        "type": "shopify://apps/boost-ai-search-filter/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+          "templateId": "ppNiXVCmfE"
+        }
       }
     }
   },
