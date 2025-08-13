@@ -33,12 +33,28 @@
     "175507970991d9bf81": {
       "type": "apps",
       "blocks": {
+        "smart_product_filter_search_best_sellers_LNiPR4": {
+          "type": "shopify://apps/smart-product-filter-search/blocks/best_sellers/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+          "settings": {
+            "heading": "Best sellers",
+            "layout": "grid",
+            "limit": 10,
+            "columns_desktop": 4,
+            "columns_tablet": 3,
+            "columns_mobile": 2,
+            "autoplay": false,
+            "loop": false,
+            "pagination": true,
+            "navigation": true
+          }
+        },
         "boost_ai_search_filter_filter_product_list_ssr_4WXLaE": {
           "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
           "settings": {}
         }
       },
       "block_order": [
+        "smart_product_filter_search_best_sellers_LNiPR4",
         "boost_ai_search_filter_filter_product_list_ssr_4WXLaE"
       ],
       "settings": {
