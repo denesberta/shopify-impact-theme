@@ -55,6 +55,7 @@
       "block_order": [
         "promotion_video_nDamyi"
       ],
+      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "products_per_row_mobile": "2",
@@ -83,11 +84,25 @@
         "review_button_background": "#000000",
         "review_button_text_color": "#ffffff"
       }
+    },
+    "728cd393-15f1-41be-8e27-e8b5a11cfa93": {
+      "type": "apps",
+      "blocks": {
+        "85212ee9-2d63-4a5f-92e1-0b97099bd3d8": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "85212ee9-2d63-4a5f-92e1-0b97099bd3d8"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "banner",
     "main",
-    "58c8403b-0b11-43dc-92ad-c777c96c57f2"
+    "58c8403b-0b11-43dc-92ad-c777c96c57f2",
+    "728cd393-15f1-41be-8e27-e8b5a11cfa93"
   ]
 }
