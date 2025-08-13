@@ -30,6 +30,31 @@
         "overlay_opacity": 30
       }
     },
+    "175507970991d9bf81": {
+      "type": "apps",
+      "blocks": {
+        "boost_ai_search_filter_filter_product_list_ssr_4WXLaE": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "boost_ai_search_filter_filter_product_list_ssr_4WXLaE"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff"
+      }
+    },
     "featured_product_FXndRF": {
       "type": "featured-product",
       "blocks": {
@@ -114,6 +139,7 @@
         "description_9bcJDf",
         "button_QAYqgD"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "product": "karanyi-sounds-complete-suite",
@@ -157,6 +183,7 @@
       "block_order": [
         "promotion_video_EFeqYb"
       ],
+      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "products_per_row_mobile": "2",
@@ -241,6 +268,7 @@
   },
   "order": [
     "banner",
+    "175507970991d9bf81",
     "featured_product_FXndRF",
     "main",
     "collection_list_Hf8TCx"
